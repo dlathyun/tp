@@ -5,6 +5,8 @@ import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
 import java.util.Objects;
 
 import seedu.address.commons.util.ToStringBuilder;
+import seedu.address.model.university.University;
+
 public class PartnerCourse {
     private final University partnerUniversity;
     private final PartnerCode partnerCode;
