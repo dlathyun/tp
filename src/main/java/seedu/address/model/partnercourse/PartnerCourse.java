@@ -6,17 +6,17 @@ import java.util.Objects;
 
 import seedu.address.commons.util.ToStringBuilder;
 public class PartnerCourse {
-    private final PartnerUniversity partnerUniversity;
+    private final University partnerUniversity;
     private final PartnerCode partnerCode;
     private final PartnerName partnerName;
 
-    public PartnerCourse(PartnerUniversity pu, PartnerCode pc, PartnerName pn) {
+    public PartnerCourse(University pu, PartnerCode pc, PartnerName pn) {
         requireAllNonNull(pu, pc, pn);
         partnerUniversity = pu;
         partnerCode = pc;
         partnerName = pn;
     }
-    public PartnerUniversity getPartnerUniversity() {
+    public University getPartnerUniversity() {
         return partnerUniversity;
     }
 
