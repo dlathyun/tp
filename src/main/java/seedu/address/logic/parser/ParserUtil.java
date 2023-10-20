@@ -11,10 +11,9 @@ import seedu.address.commons.core.index.Index;
 import seedu.address.commons.util.StringUtil;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.localcourse.LocalCode;
-import seedu.address.model.localcourse.LocalName;
+import seedu.address.model.localcourse.PartnerName;
 import seedu.address.model.notes.Content;
 import seedu.address.model.partnercourse.PartnerCode;
-import seedu.address.model.partnercourse.PartnerName;
 import seedu.address.model.person.Address;
 import seedu.address.model.person.Email;
 import seedu.address.model.person.Name;
@@ -151,13 +150,13 @@ public class ParserUtil {
      *
      * @throws ParseException if the given {@code localName} is invalid.
      */
-    public static LocalName parseLocalName(String localName) throws ParseException {
+    public static PartnerName parseLocalName(String localName) throws ParseException {
         requireNonNull(localName);
         String trimmedLocalName = localName.trim();
-        if (!LocalName.isValidLocalName(trimmedLocalName)) {
-            throw new ParseException(LocalName.MESSAGE_CONSTRAINTS);
+        if (!PartnerName.isValidLocalName(trimmedLocalName)) {
+            throw new ParseException(PartnerName.MESSAGE_CONSTRAINTS);
         }
-        return new LocalName(localName);
+        return new PartnerName(localName);
     }
 
     /**
@@ -181,13 +180,13 @@ public class ParserUtil {
      *
      * @throws ParseException if the given {@code partnerName} is invalid.
      */
-    public static PartnerName parsePartnerName(String partnerName) throws ParseException {
+    public static seedu.address.model.partnercourse.PartnerName parsePartnerName(String partnerName) throws ParseException {
         requireNonNull(partnerName);
         String trimmedPartnerName = partnerName.trim();
-        if (!PartnerName.isValidPartnerName(trimmedPartnerName)) {
-            throw new ParseException(PartnerName.MESSAGE_CONSTRAINTS);
+        if (!seedu.address.model.partnercourse.PartnerName.isValidPartnerName(trimmedPartnerName)) {
+            throw new ParseException(seedu.address.model.partnercourse.PartnerName.MESSAGE_CONSTRAINTS);
         }
-        return new PartnerName(partnerName);
+        return new seedu.address.model.partnercourse.PartnerName(partnerName);
     }
 
     /**

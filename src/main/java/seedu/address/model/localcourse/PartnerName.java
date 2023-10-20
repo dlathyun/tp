@@ -7,7 +7,7 @@ import static seedu.address.commons.util.AppUtil.checkArgument;
  * Represents a Local Course's local name in SEPlendid.
  * Guarantees: immutable; is valid as declared in {@link #isValidLocalName(String)}
  */
-public class LocalName {
+public class PartnerName {
 
     // Used in AppUtil#checkArgument and ParserUtil, JsonAdaptedXXX exceptions
     public static final String MESSAGE_CONSTRAINTS = "LocalName can take any values, given it starts with a "
@@ -26,7 +26,7 @@ public class LocalName {
      *
      * @param localName A valid localname.
      */
-    public LocalName(String localName) {
+    public PartnerName(String localName) {
         localName = localName.trim();
         requireNonNull(localName);
         checkArgument(isValidLocalName(localName), MESSAGE_CONSTRAINTS);
@@ -53,11 +53,11 @@ public class LocalName {
         }
 
         // instanceof handles nulls
-        if (!(other instanceof LocalName)) {
+        if (!(other instanceof PartnerName)) {
             return false;
         }
 
-        LocalName otherLocalName = (LocalName) other;
+        PartnerName otherLocalName = (PartnerName) other;
         // performs semantic check
         return value.equals(otherLocalName.value);
     }

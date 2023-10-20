@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import seedu.address.commons.exceptions.IllegalValueException;
 import seedu.address.model.localcourse.LocalCode;
 import seedu.address.model.localcourse.LocalCourse;
-import seedu.address.model.localcourse.LocalName;
+import seedu.address.model.localcourse.PartnerName;
 
 /**
  * Jackson-friendly version of {@link LocalCourse}.
@@ -55,12 +55,12 @@ class JsonAdaptedLocalCourse {
 
         if (localName == null) {
             throw new IllegalValueException(String.format(MISSING_FIELD_MESSAGE_FORMAT,
-                    LocalName.class.getSimpleName()));
+                    PartnerName.class.getSimpleName()));
         }
-        if (!LocalName.isValidLocalName(localName)) {
-            throw new IllegalValueException(LocalName.MESSAGE_CONSTRAINTS);
+        if (!PartnerName.isValidLocalName(localName)) {
+            throw new IllegalValueException(PartnerName.MESSAGE_CONSTRAINTS);
         }
-        final LocalName modelLocalName = new LocalName(localName);
+        final PartnerName modelLocalName = new PartnerName(localName);
 
         return new LocalCourse(modelLocalCode, modelLocalName);
     }

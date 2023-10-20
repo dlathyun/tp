@@ -16,12 +16,11 @@ import seedu.address.model.ReadOnlyUniversityCatalogue;
 import seedu.address.model.UniversityCatalogue;
 import seedu.address.model.localcourse.LocalCode;
 import seedu.address.model.localcourse.LocalCourse;
-import seedu.address.model.localcourse.LocalName;
+import seedu.address.model.localcourse.PartnerName;
 import seedu.address.model.notes.Content;
 import seedu.address.model.notes.Note;
 import seedu.address.model.partnercourse.PartnerCode;
 import seedu.address.model.partnercourse.PartnerCourse;
-import seedu.address.model.partnercourse.PartnerName;
 import seedu.address.model.person.Address;
 import seedu.address.model.person.Email;
 import seedu.address.model.person.Name;
@@ -80,8 +79,8 @@ public class SampleDataUtil {
 
     public static LocalCourse[] getSampleLocalCourses() {
         return new LocalCourse[] {new LocalCourse(new LocalCode("CS1101S"),
-                new LocalName("Programming Methodology I")),
-                                  new LocalCourse(new LocalCode("CS1231S"), new LocalName("Discrete Structures"))
+                new PartnerName("Programming Methodology I")),
+                                  new LocalCourse(new LocalCode("CS1231S"), new PartnerName("Discrete Structures"))
         };
     }
 
@@ -111,10 +110,10 @@ public class SampleDataUtil {
     public static PartnerCourse[] getSamplePartnerCourses() {
         return new PartnerCourse[] {new PartnerCourse(new University(new UniversityName("Boston College")),
             new PartnerCode("COM1231"),
-            new PartnerName("Discrete Mathematics")),
+            new seedu.address.model.partnercourse.PartnerName("Discrete Mathematics")),
             new PartnerCourse(new University(new UniversityName("Harvard University")),
                 new PartnerCode("COM3041"),
-                new PartnerName("Computer Networks"))
+                new seedu.address.model.partnercourse.PartnerName("Computer Networks"))
         };
     }
 

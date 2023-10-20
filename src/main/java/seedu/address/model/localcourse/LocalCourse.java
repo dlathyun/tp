@@ -16,12 +16,12 @@ public class LocalCourse {
     private final LocalCode localCode;
 
     // Data fields
-    private final LocalName localName;
+    private final PartnerName localName;
 
     /**
      * Every field must be present and not null
      */
-    public LocalCourse(LocalCode lc, LocalName ln) {
+    public LocalCourse(LocalCode lc, PartnerName ln) {
         requireAllNonNull(lc, ln);
         localCode = lc;
         localName = ln;
@@ -32,7 +32,7 @@ public class LocalCourse {
         return localCode;
     }
 
-    public LocalName getLocalName() {
+    public PartnerName getLocalName() {
         return localName;
     }
 

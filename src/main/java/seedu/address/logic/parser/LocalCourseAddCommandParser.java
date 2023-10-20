@@ -9,7 +9,7 @@ import seedu.address.logic.commands.LocalCourseAddCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.localcourse.LocalCode;
 import seedu.address.model.localcourse.LocalCourse;
-import seedu.address.model.localcourse.LocalName;
+import seedu.address.model.localcourse.PartnerName;
 
 /**
  * Parses input arguments and creates a new LocalCourse object.
@@ -39,7 +39,7 @@ public class LocalCourseAddCommandParser implements Parser<LocalCourseAddCommand
 
         // All arguments should be a non-empty {@code Optional}
         LocalCode localCode = ParserUtil.parseLocalCode(parameterToArgMap.getValue(PARAMETER_LOCALCODE).get());
-        LocalName localName = ParserUtil.parseLocalName(parameterToArgMap.getValue(PARAMETER_LOCALNAME).get());
+        PartnerName localName = ParserUtil.parseLocalName(parameterToArgMap.getValue(PARAMETER_LOCALNAME).get());
 
         LocalCourse localCourse = new LocalCourse(localCode, localName);
 

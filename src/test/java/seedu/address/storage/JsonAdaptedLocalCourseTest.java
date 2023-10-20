@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 
 import seedu.address.commons.exceptions.IllegalValueException;
 import seedu.address.model.localcourse.LocalCode;
-import seedu.address.model.localcourse.LocalName;
+import seedu.address.model.localcourse.PartnerName;
 
 public class JsonAdaptedLocalCourseTest {
 
@@ -42,14 +42,14 @@ public class JsonAdaptedLocalCourseTest {
     public void toModelType_invalidLocalName_throwsIllegalValueException() {
         JsonAdaptedLocalCourse localCourse =
                 new JsonAdaptedLocalCourse(TYPICAL_LOCAL_COURSE_CODE, INVALID_LOCAL_COURSE_NAME);
-        String expectedMessage = LocalName.MESSAGE_CONSTRAINTS;
+        String expectedMessage = PartnerName.MESSAGE_CONSTRAINTS;
         assertThrows(IllegalValueException.class, expectedMessage, localCourse::toModelType);
     }
 
     @Test
     public void toModelType_nullLocalName_throwsIllegalValueException() {
         JsonAdaptedLocalCourse localCourse = new JsonAdaptedLocalCourse(TYPICAL_LOCAL_COURSE_CODE, null);
-        String expectedMessage = String.format(MISSING_FIELD_MESSAGE_FORMAT, LocalName.class.getSimpleName());
+        String expectedMessage = String.format(MISSING_FIELD_MESSAGE_FORMAT, PartnerName.class.getSimpleName());
         assertThrows(IllegalValueException.class, expectedMessage, localCourse::toModelType);
     }
 

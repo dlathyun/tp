@@ -21,7 +21,7 @@ import org.junit.jupiter.api.Test;
 
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.localcourse.LocalCode;
-import seedu.address.model.localcourse.LocalName;
+import seedu.address.model.localcourse.PartnerName;
 import seedu.address.model.person.Address;
 import seedu.address.model.person.Email;
 import seedu.address.model.person.Name;
@@ -237,14 +237,14 @@ public class ParserUtilTest {
 
     @Test
     public void parseLocalName_validValueWithoutWhitespace_returnsLocalName() throws Exception {
-        LocalName expectedLocalName = new LocalName(TYPICAL_LOCAL_COURSE_NAME);
+        PartnerName expectedLocalName = new PartnerName(TYPICAL_LOCAL_COURSE_NAME);
         assertEquals(expectedLocalName, ParserUtil.parseLocalName(TYPICAL_LOCAL_COURSE_NAME));
     }
 
     @Test
     public void parseLocalName_validValueWithWhitespace_returnsTrimmedLocalName() throws Exception {
         String localNameWithWhitespace = WHITESPACE + TYPICAL_LOCAL_COURSE_NAME + WHITESPACE;
-        LocalName expectedLocalName = new LocalName(TYPICAL_LOCAL_COURSE_NAME);
+        PartnerName expectedLocalName = new PartnerName(TYPICAL_LOCAL_COURSE_NAME);
         assertEquals(expectedLocalName, ParserUtil.parseLocalName(localNameWithWhitespace));
     }
 
