@@ -13,14 +13,14 @@ public class LocalCourseBuilder {
     public static final String DEFAULT_LOCAL_NAME = "Software Engineering";
 
     private LocalCode localCode;
-    private PartnerName localName;
+    private LocalName localName;
 
     /**
      * Creates a {@code LocalCourseBuilder} with the default details.
      */
     public LocalCourseBuilder() {
         localCode = new LocalCode(DEFAULT_LOCAL_CODE);
-        localName = new PartnerName(DEFAULT_LOCAL_NAME);
+        localName = new LocalName(DEFAULT_LOCAL_NAME);
     }
 
     /**
@@ -43,7 +43,7 @@ public class LocalCourseBuilder {
      * Sets the {@code LocalName} of the {@code LocalCourse} that we are building.
      */
     public LocalCourseBuilder withLocalName(String localName) {
-        this.localName = new PartnerName(localName);
+        this.localName = new LocalName(localName);
         return this;
     }
 
